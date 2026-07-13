@@ -2,7 +2,7 @@
 // EDIT THIS FILE TO MAKE THE PORTFOLIO YOURS
 // =============================================
 
-const DOMAIN = "tamishmhatre.com";
+const DOMAIN = "tamish560.github.io/tamish-portfolio";
 export const BASE_URL = `https://${DOMAIN}`;
 
 export const ABOUT_ME = {
