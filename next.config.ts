@@ -5,17 +5,13 @@ const nextConfig: NextConfig = {
   basePath: "/tamish-portfolio",
   poweredByHeader: false,
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "skillicons.dev",
-      },
-      {
-        protocol: "https",
-        hostname: "hits.sh",
+        hostname: "**",
       },
     ],
-    dangerouslyAllowSVG: true,
   },
 };
 
