@@ -3,7 +3,6 @@
 import { EXPERIENCE } from "@/app/constants/data";
 import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import CollapsibleGrid from "@/components/ui/collapsible-grid";
 
@@ -30,7 +29,7 @@ export default function Experience() {
               <div className="flex items-center gap-3">
                 {exp.logo && (
                   <div className="w-12 h-12 flex-shrink-0 rounded-xl border border-border overflow-hidden bg-background">
-                    <Image
+                    <img
                       src={exp.logo}
                       alt={`${exp.company} logo`}
                       width={48}
