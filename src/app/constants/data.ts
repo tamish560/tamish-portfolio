@@ -83,11 +83,4 @@ export const EDUCATION = [
   },
 ];
 
-export const TESTIMONIALS = [
-  {
-    name: "Placeholder",
-    role: "Contributor @ Valtors",
-    content:
-      "Add testimonials here when you get them from collaborators and community members.",
-  },
-];
+export const TESTIMONIALS: { name: string; role: string; content: string }[] = [];
