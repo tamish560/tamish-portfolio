@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import { MdVerified } from "react-icons/md";
 import { FaLocationCrosshairs } from "react-icons/fa6";
-import Image from "next/image";
 
 import { ABOUT_ME } from "@/app/constants/data";
 
@@ -57,22 +56,20 @@ const Profile = () => {
             onMouseLeave={() => setIsHovering(false)}
           >
             {isHovering ? (
-              <Image
+              <img
                 src={ABOUT_ME.profileGif}
                 alt="Profile GIF"
                 width={96}
                 height={96}
                 className="w-full h-full object-cover"
-                unoptimized // Keep GIF animation
               />
             ) : (
-              <Image
+              <img
                 src={ABOUT_ME.profileImage}
                 alt={ABOUT_ME.name}
                 width={96}
                 height={96}
                 className="w-full h-full object-cover"
-                priority
               />
             )}
           </div>
