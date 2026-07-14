@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 
 const IMAGES = [
   { src: "/relay-hero.png", alt: "Relay" },
@@ -37,7 +36,7 @@ export default function ImageMarquee() {
               key={`${img.src}-${i}`}
               className="flex-shrink-0 border-r border-dashed border-border p-2 flex items-center justify-center"
             >
-              <Image
+              <img
                 src={img.src}
                 alt={img.alt}
                 width={200}
