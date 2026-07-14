@@ -2,18 +2,11 @@ import type { Metadata } from "next";
 import { Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
-import { Analytics } from "@vercel/analytics/next";
+import { BASE_URL, SOCIAL_LINKS, ABOUT_ME, USER_NAMES, EDUCATION } from "./constants/data";
 import SmoothScroll from "@/components/ui/smooth-scroll";
 import ScrollToTop from "@/components/ui/scroll-to-top";
 import GridPattern from "@/components/ui/grid-pattern";
 import CustomCursor from "@/components/ui/custom-cursor";
-import {
-  BASE_URL,
-  SOCIAL_LINKS,
-  ABOUT_ME,
-  USER_NAMES,
-  EDUCATION,
-} from "./constants/data";
 
 const bricolage = Bricolage_Grotesque({
   variable: "--font-bricolage",
@@ -187,7 +180,6 @@ export default function RootLayout({
           <ScrollToTop />
           <SmoothScroll>{children}</SmoothScroll>
         </ThemeProvider>
-        <Analytics />
       </body>
     </html>
   );
