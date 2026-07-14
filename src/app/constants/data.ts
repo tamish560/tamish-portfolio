@@ -24,7 +24,7 @@ export const USER_NAMES = {
   linkedinUsername: "tamish-mhatre-885317243",
   twitterUsername: "TamishMhatre",
   peerlistUsername: "tamish",
-  instagramUsername: "tamish",
+  instagramUsername: "tamishmhatre",
   calUsername: "tamish",
 };
 
@@ -84,15 +84,44 @@ export const EXPERIENCE = [
       "Contributing to Agent Orchestrator, an open source IDE for parallel AI coding agents. Working on UX improvements, agent-friendliness audits, and Windows compatibility fixes.",
     skills: ["Go", "Electron", "React", "TypeScript"],
   },
+  {
+    company: "IdeaHatchLabs",
+    companyLink: "",
+    logo: "/placeholder-logo.png",
+    role: "Co-Founder",
+    period: "2024 - Present",
+    location: "India",
+    description:
+      "Co-founded and managed tech and operations. Handled product development, team coordination, and day-to-day operations.",
+    skills: ["Operations", "Product", "Team Management"],
+  },
+  {
+    company: "Ghostpay",
+    companyLink: "",
+    logo: "/placeholder-logo.png",
+    role: "Co-Founder",
+    period: "2024 - 2024",
+    location: "Mumbai, India",
+    description:
+      "Co-founded and led operations. Built and scaled the payments product from scratch, managing partnerships and day-to-day execution.",
+    skills: ["Operations", "Payments", "Partnerships"],
+  },
 ];
 
 export const EDUCATION = [
   {
-    degree: "Self-taught",
-    institution: "Open Source",
-    institutionLink: "https://github.com/tamish560",
-    period: "2024 - Present",
-    score: "Building in public",
+    degree: "Bachelor of Engineering - CSE (DS)",
+    institution: "University of Mumbai",
+    institutionLink: "",
+    period: "2023 - 2027",
+    score: "Worked on an autonomous solar electric car, networking, and hands-on engineering projects.",
+  },
+  {
+    degree: "Diploma in Music",
+    institution: "Akhil Bharatiya Gandharva Mahavidyalaya",
+    institutionLink: "",
+    period: "2016 - 2022",
+    score: "First Class - Indian Classical Music, Harmonium, Lyricism, Poetry",
   },
 ];
 
