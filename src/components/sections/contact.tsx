@@ -10,7 +10,6 @@ import {
 } from "lucide-react";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaRegCommentDots } from "react-icons/fa";
-import { SiPeerlist } from "react-icons/si";
 import { useState, ChangeEvent, FormEvent, ComponentType } from "react";
 import Meeting from "../ui/cal-meeting";
 import { SOCIAL_LINKS, CONTACT_FORM_ENDPOINT } from "@/app/constants/data";
@@ -260,7 +259,7 @@ const Contact = () => {
             </div>
 
             <div className="p-4 w-full flex justify-start">
-              <div className="grid grid-cols-4 gap-3 w-full max-w-[280px]">
+              <div className="grid grid-cols-3 gap-3 w-full max-w-[280px]">
                 {/* GitHub */}
                 <a
                   href={SOCIAL_LINKS.github}
@@ -292,17 +291,6 @@ const Contact = () => {
                   title="Twitter"
                 >
                   <FaXTwitter className="w-5 h-5" />
-                </a>
-
-                {/* Peerlist */}
-                <a
-                  href={SOCIAL_LINKS.peerlist}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2 btn flex items-center justify-center"
-                  title="Peerlist"
-                >
-                  <SiPeerlist className="w-5 h-5" />
                 </a>
               </div>
             </div>
