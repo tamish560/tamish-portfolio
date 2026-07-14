@@ -1,3 +1,5 @@
+"use client";
+
 import { SKILLS } from "@/app/constants/data";
 
 const Skills = () => (
@@ -22,6 +24,11 @@ const Skills = () => (
               width={32}
               height={32}
               decoding="async"
+              onError={(e) => {
+                const target = e.currentTarget;
+                target.style.display = "none";
+                target.parentElement!.textContent = skill;
+              }}
             />
           </button>
         ))}
