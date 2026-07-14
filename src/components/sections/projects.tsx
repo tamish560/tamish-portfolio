@@ -14,7 +14,6 @@ export default function Projects() {
 
   const handleProjectClick = (e: React.MouseEvent) => {
     e.stopPropagation();
-    // Mark that user navigated from main page
     sessionStorage.setItem("navigatedFromMainPage", "true");
   };
 
