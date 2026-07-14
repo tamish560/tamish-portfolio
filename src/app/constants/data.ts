@@ -43,25 +43,21 @@ export const CONTACT_FORM_ENDPOINT = "https://formspree.io/f/your-form-id";
 export { PROJECTS } from "./projects";
 
 export const SKILLS = [
-  "go",
-  "ts",
-  "react",
-  "nextjs",
-  "tailwind",
-  "nodejs",
-  "npm",
-  "git",
-  "github",
-  "githubactions",
-  "docker",
-  "sqlite",
-  "vite",
-  "vscode",
-  "md",
-  "vercel",
+  "go", "ts", "react", "nextjs", "tailwind", "nodejs", "npm", "git", "github", "githubactions", "docker", "sqlite", "vite", "vscode", "md", "vercel",
 ];
 
 export const EXPERIENCE = [
+  {
+    company: "MegaLLM",
+    companyLink: "",
+    logo: "/megallm-logo.png",
+    role: "Co-Founder & Head of Business",
+    period: "2025 - Present",
+    location: "Bengaluru, India",
+    description:
+      "Building India's fastest growing AI startup. Scaling a developer platform that provides access to 70+ LLMs in a single API. Managing product and business operations.",
+    skills: ["Product Management", "Business Development", "AI Platforms"],
+  },
   {
     company: "Valtors",
     companyLink: "https://github.com/valtors",
@@ -89,22 +85,11 @@ export const EXPERIENCE = [
     companyLink: "",
     logo: "/placeholder-logo.png",
     role: "Co-Founder",
-    period: "2024 - Present",
+    period: "2024 - 2024",
     location: "India",
     description:
       "Co-founded and managed tech and operations. Handled product development, team coordination, and day-to-day operations.",
     skills: ["Operations", "Product", "Team Management"],
-  },
-  {
-    company: "Ghostpay",
-    companyLink: "",
-    logo: "/placeholder-logo.png",
-    role: "Co-Founder",
-    period: "2024 - 2024",
-    location: "Mumbai, India",
-    description:
-      "Co-founded and led operations. Built and scaled the payments product from scratch, managing partnerships and day-to-day execution.",
-    skills: ["Operations", "Payments", "Partnerships"],
   },
 ];
 
