@@ -152,7 +152,6 @@ export default function RootLayout({
                   SOCIAL_LINKS.linkedin,
                   SOCIAL_LINKS.twitter,
                   SOCIAL_LINKS.instagram,
-                  SOCIAL_LINKS.peerlist,
                 ],
               },
               {
