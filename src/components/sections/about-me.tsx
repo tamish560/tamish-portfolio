@@ -1,12 +1,8 @@
 import Link from "next/link";
 import { SOCIAL_LINKS, ABOUT_ME } from "@/app/constants/data";
-import { Github, Linkedin, Mail, FileText } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 import { FaXTwitter, FaInstagram } from "react-icons/fa6";
-import { SiPeerlist } from "react-icons/si";
 
-// =============================================
-// SOCIAL BUTTONS DATA
-// =============================================
 const SOCIAL_BUTTONS = [
   {
     href: SOCIAL_LINKS.github,
@@ -29,21 +25,6 @@ const SOCIAL_BUTTONS = [
     icon: <FaInstagram className="w-5 h-5" />,
   },
   {
-    href: SOCIAL_LINKS.peerlist,
-    label: "Peerlist",
-    icon: <SiPeerlist className="w-5 h-5" />,
-  },
-  {
-    href: SOCIAL_LINKS.resume,
-    label: "Resume",
-    icon: (
-      <>
-        <FileText className="w-5 h-5" /> Resume
-      </>
-    ),
-    className: "flex items-center gap-2 font-medium",
-  },
-  {
     href: SOCIAL_LINKS.email,
     label: "Email",
     icon: (
@@ -55,9 +36,6 @@ const SOCIAL_BUTTONS = [
   },
 ];
 
-// =============================================
-// MAIN COMPONENT
-// =============================================
 export default function AboutMe() {
   return (
     <section id="about" className="divide-y divide-dashed divide-border">
