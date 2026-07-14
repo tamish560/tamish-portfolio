@@ -2,7 +2,7 @@
 // EDIT THIS FILE TO MAKE THE PORTFOLIO YOURS
 // =============================================
 
-const DOMAIN = "tamish560.github.io/tamish-portfolio";
+const DOMAIN = "tamishmhatre.com";
 export const BASE_URL = `https://${DOMAIN}`;
 
 export const ABOUT_ME = {
@@ -15,8 +15,8 @@ export const ABOUT_ME = {
     "Right now I'm building Relay (a Go MCP server with 40 tools), Reflow (a responsive toolkit that works across 8 frameworks), and Observer (a security-first MCP observability proxy). All open source, all MIT.",
     "I'm also contributing to Agent Orchestrator on the UX side, and I'm working toward growing Valtors to 10,000+ stars and 100+ contributors.",
   ],
-  profileImage: "/placeholder-avatar.png",
-  profileGif: "/placeholder-avatar.png",
+  profileImage: "/profile-avatar.png",
+  profileGif: "/profile-gif.png",
 };
 
 export const USER_NAMES = {
@@ -65,7 +65,7 @@ export const EXPERIENCE = [
   {
     company: "Valtors",
     companyLink: "https://github.com/valtors",
-    logo: "/placeholder-logo.png",
+    logo: "/valtors-logo.png",
     role: "Founder & Open Source Developer",
     period: "2025 - Present",
     location: "Bangalore, India",
@@ -76,7 +76,7 @@ export const EXPERIENCE = [
   {
     company: "Agent Orchestrator",
     companyLink: "https://github.com/AgentWrapper/agent-orchestrator",
-    logo: "/placeholder-logo.png",
+    logo: "/ao-logo.png",
     role: "UX Contributor",
     period: "2026 - Present",
     location: "Remote",
