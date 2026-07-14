@@ -1,8 +1,8 @@
-"use client";
-
 import { TESTIMONIALS } from "@/app/constants/data";
 
 const Testimonials = () => {
+  if (TESTIMONIALS.length === 0) return null;
+
   return (
     <section id="testimonials">
       <div className="flex items-center py-2 px-4 border-b border-dashed border-border">
