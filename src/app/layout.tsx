@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     siteName: ABOUT_ME.name,
     images: [
       {
-        url: "/opengraph-image.png",
+        url: "/tamish-portfolio/opengraph-image.png",
         width: 1200,
         height: 630,
         alt: `${ABOUT_ME.name} - Portfolio Website`,
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     title: ABOUT_ME.name,
     description: `${ABOUT_ME.name}'s personal portfolio showcasing development skills, projects, and professional experience.`,
     creator: `@${USER_NAMES.twitterUsername}`,
-    images: ["/opengraph-image.png"],
+    images: ["/tamish-portfolio/opengraph-image.png"],
   },
   robots: {
     index: true,
