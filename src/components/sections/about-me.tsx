@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { SOCIAL_LINKS, ABOUT_ME } from "@/app/constants/data";
 import { Github, Linkedin, Mail } from "lucide-react";
-import { FaXTwitter, FaInstagram } from "react-icons/fa6";
+import { FaXTwitter, FaInstagram, FaPinterest } from "react-icons/fa6";
 
 const SOCIAL_BUTTONS = [
   {
@@ -23,6 +23,11 @@ const SOCIAL_BUTTONS = [
     href: SOCIAL_LINKS.instagram,
     label: "Instagram",
     icon: <FaInstagram className="w-5 h-5" />,
+  },
+  {
+    href: SOCIAL_LINKS.pinterest,
+    label: "Pinterest",
+    icon: <FaPinterest className="w-5 h-5" />,
   },
   {
     href: SOCIAL_LINKS.email,
