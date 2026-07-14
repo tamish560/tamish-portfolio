@@ -1,15 +1,17 @@
 "use client";
 
 
+const BP = "/tamish-portfolio";
+
 const IMAGES = [
-  { src: "/relay-hero.png", alt: "Relay" },
-  { src: "/reflow-hero.png", alt: "Reflow" },
-  { src: "/observer-hero.png", alt: "Observer" },
-  { src: "/profile-avatar.png", alt: "Tamish" },
-  { src: "/relay-hero.png", alt: "Relay" },
-  { src: "/reflow-hero.png", alt: "Reflow" },
-  { src: "/observer-hero.png", alt: "Observer" },
-  { src: "/profile-avatar.png", alt: "Tamish" },
+  { src: `${BP}/relay-hero.png`, alt: "Relay" },
+  { src: `${BP}/reflow-hero.png`, alt: "Reflow" },
+  { src: `${BP}/observer-hero.png`, alt: "Observer" },
+  { src: `${BP}/profile-avatar.png`, alt: "Tamish" },
+  { src: `${BP}/relay-hero.png`, alt: "Relay" },
+  { src: `${BP}/reflow-hero.png`, alt: "Reflow" },
+  { src: `${BP}/observer-hero.png`, alt: "Observer" },
+  { src: `${BP}/profile-avatar.png`, alt: "Tamish" },
 ];
 
 export default function ImageMarquee() {
