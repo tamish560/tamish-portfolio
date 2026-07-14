@@ -43,7 +43,7 @@ export default function Projects() {
                   <h3 className="font-medium text-base">
                     <ImageTooltip
                       imageSrc={
-                        project.images?.hero || "/placeholder-image.png"
+                        project.images?.hero || "/tamish-portfolio/placeholder-image.png"
                       }
                       imageAlt={`${project.name} preview`}
                     >
