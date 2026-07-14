@@ -16,11 +16,11 @@ export const PROJECTS = [
     link: "https://github.com/valtors/relay",
     github: "https://github.com/valtors/relay",
     images: {
-      hero: "/tamish-portfolio/placeholder-image.png",
+      hero: "/tamish-portfolio/relay-hero.png",
       gallery: [
         {
-          src: "/tamish-portfolio/placeholder-image.png",
-          alt: "Relay architecture overview",
+          src: "/tamish-portfolio/relay-hero.png",
+          alt: "Relay project landing page",
           caption: "40 tools across 7 categories",
         },
       ],
@@ -75,11 +75,11 @@ export const PROJECTS = [
     link: "https://valtors.github.io/reflow/",
     github: "https://github.com/valtors/reflow",
     images: {
-      hero: "/tamish-portfolio/placeholder-image.png",
+      hero: "/tamish-portfolio/reflow-hero.png",
       gallery: [
         {
-          src: "/tamish-portfolio/placeholder-image.png",
-          alt: "Reflow documentation site",
+          src: "/tamish-portfolio/reflow-hero.png",
+          alt: "Reflow project landing page",
           caption: "Docs site with live examples",
         },
       ],
@@ -126,11 +126,11 @@ export const PROJECTS = [
     link: "https://github.com/valtors/observer",
     github: "https://github.com/valtors/observer",
     images: {
-      hero: "/tamish-portfolio/placeholder-image.png",
+      hero: "/tamish-portfolio/observer-hero.png",
       gallery: [
         {
-          src: "/tamish-portfolio/placeholder-image.png",
-          alt: "Observer architecture",
+          src: "/tamish-portfolio/observer-hero.png",
+          alt: "Observer project landing page",
           caption: "Proxy between agent and MCP server",
         },
       ],
