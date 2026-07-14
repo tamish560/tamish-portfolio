@@ -25,18 +25,17 @@ export const USER_NAMES = {
   githubUsername: "tamish560",
   linkedinUsername: "tamish-mhatre-885317243",
   twitterUsername: "TamishMhatre",
-  peerlistUsername: "tamish",
   instagramUsername: "tamishmhatre",
+  pinterestUsername: "tamish46",
   calUsername: "tamish",
 };
 
 export const SOCIAL_LINKS = {
   github: `https://github.com/${USER_NAMES.githubUsername}`,
   linkedin: `https://linkedin.com/in/${USER_NAMES.linkedinUsername}`,
-  peerlist: `https://peerlist.io/${USER_NAMES.peerlistUsername}`,
   twitter: `https://x.com/${USER_NAMES.twitterUsername}`,
   instagram: `https://instagram.com/${USER_NAMES.instagramUsername}`,
-  resume: `${BASE_PATH}/resume.pdf`,
+  pinterest: `https://in.pinterest.com/${USER_NAMES.pinterestUsername}/`,
   email: `mailto:${ABOUT_ME.email}?subject=Message%20from%20Website&body=Hi!%20I%27m...`,
 };
 
