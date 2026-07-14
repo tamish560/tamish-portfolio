@@ -1,6 +1,5 @@
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { ExternalLink, Github } from "lucide-react";
 import { PROJECTS, BASE_URL, ABOUT_ME } from "@/app/constants/data";
@@ -176,12 +175,10 @@ const ProjectContent = ({ project }: { project: Project }) => (
     {project.images?.hero && (
       <div className="p-2">
         <div className="relative aspect-video overflow-hidden">
-          <Image
+          <img
             src={project.images.hero}
-            alt={`${project.name} preview`}
-            fill
+            alt={`${project.name} preview`} style={{position:"absolute",inset:0,width:"100%",height:"100%"}}
             className="object-cover rounded-lg"
-            priority
           />
         </div>
       </div>
@@ -273,10 +270,9 @@ const ProjectContent = ({ project }: { project: Project }) => (
               className="relative group p-2 border-dashed border-border border-b md:odd:border-r last:border-b-0 md:[&:nth-last-child(-n+2)]:border-b-0"
             >
               <div className="relative aspect-video overflow-hidden">
-                <Image
+                <img
                   src={image.src}
-                  alt={image.alt}
-                  fill
+                  alt={image.alt} style={{position:"absolute",inset:0,width:"100%",height:"100%"}}
                   className="object-cover rounded-lg"
                 />
                 {image.caption && (
