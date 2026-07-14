@@ -2,7 +2,6 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import { createPortal } from "react-dom";
-import Image from "next/image";
 
 interface ImageTooltipProps {
   children: React.ReactNode;
@@ -103,13 +102,10 @@ export default function ImageTooltip({
           >
             <div className="bg-muted border border-gray-200 dark:border-gray-700 rounded-xl shadow-xl overflow-hidden">
               <div className="relative w-80 h-48">
-                <Image
+                <img
                   src={imageSrc}
-                  alt={imageAlt}
-                  fill
+                  alt={imageAlt} style={{position:"absolute",inset:0,width:"100%",height:"100%"}}
                   className="object-cover"
-                  sizes="320px"
-                  loading="lazy"
                 />
               </div>
             </div>
