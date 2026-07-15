@@ -1,5 +1,66 @@
 export const PROJECTS = [
   {
+    name: "mcprobe",
+    tagline: "Security scanner for MCP servers. Single binary, zero deps.",
+    overview:
+      "mcprobe connects to any MCP server, introspects its tools, prompts, and resources, then scans for prompt injection patterns, tool shadowing across servers, and drift from baseline (rug-pull attacks). Outputs text, JSON, or SARIF for CI integration.",
+    description:
+      "A Go CLI that acts as a security scanner for MCP servers. Implements the MCP client protocol from scratch with stdio and HTTP transports. Detects 18 prompt injection patterns in tool descriptions, flags tool name shadowing when multiple servers define the same tool, saves baselines and diffs for drift detection, and exports SARIF 2.1.0 for CI pipelines. Pure Go stdlib, zero dependencies, single static binary.",
+    tech: [
+      "Go",
+      "MCP",
+      "CLI",
+      "SARIF",
+      "Security",
+    ],
+    link: "https://github.com/tamish560/mcprobe",
+    github: "https://github.com/tamish560/mcprobe",
+    images: {
+      hero: "/tamish-portfolio/mcprobe-hero.png",
+      gallery: [
+        {
+          src: "/tamish-portfolio/mcprobe-hero.png",
+          alt: "mcprobe scan report output",
+          caption: "Security scan with risk score",
+        },
+      ],
+    },
+    features: [
+      "18 prompt injection pattern detectors for tool, prompt, and schema descriptions",
+      "Tool shadowing detection across multiple MCP servers",
+      "Baseline snapshots and drift detection for rug-pull attacks",
+      "Path traversal detection in resource URIs",
+      "Risk scoring 0-100 with severity levels (MINIMAL to CRITICAL)",
+      "SARIF 2.1.0 output for GitHub Actions and CI integration",
+      "Zero dependencies, Go stdlib only, single static binary",
+    ],
+    technicalDetails: [
+      {
+        title: "MCP Client Implementation",
+        description:
+          "Implements the full MCP client handshake (initialize, notifications/initialized) and introspection (tools/list, prompts/list, resources/list) from scratch over JSON-RPC. Supports both stdio and HTTP transports with a clean Transport interface.",
+      },
+      {
+        title: "Injection Detection Engine",
+        description:
+          "18 regex patterns scan tool descriptions, prompt descriptions, and schema property descriptions for known injection vectors: 'ignore previous instructions', 'you are now a...', 'execute arbitrary commands', 'curl | bash', 'exfiltrate data', 'bypass security', and more.",
+      },
+    ],
+    challenges: [
+      {
+        problem: "MCP servers can silently change tool descriptions after initial trust",
+        solution:
+          "Baseline snapshots record the full server state (tools, prompts, resources, descriptions, schemas). Diff mode compares current state against baseline, flagging description changes as CRITICAL (potential rug-pull), tool additions as MEDIUM, and removals as HIGH.",
+      },
+    ],
+    metrics: {
+      stars: "0+",
+      patterns: "18",
+      deps: "0",
+      formats: "3",
+    },
+  },
+  {
     name: "Relay",
     tagline: "Go MCP server with 40 tools across 7 categories.",
     overview:
