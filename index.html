@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>tamish mhatre</title>
+<meta name="description" content="i can't code. i ship using AI agents. this is what i built.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg: #0a0a0a;
+  --bg-soft: #111;
+  --bg-card: #141414;
+  --text: #fafafa;
+  --text-soft: #aaa;
+  --text-muted: #555;
+  --border: #1a1a1a;
+  --accent: #e0504f;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Archivo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--text-soft); text-decoration: underline; text-decoration-color: var(--border); transition: color 0.2s, text-decoration-color 0.2s; }
+a:hover { color: var(--text); text-decoration-color: var(--accent); }
+
+.wrap {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 120px 24px 80px;
+}
+
+.eyebrow {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  margin-bottom: 40px;
+}
+
+p {
+  font-size: 17px;
+  font-weight: 300;
+  color: var(--text-soft);
+  margin-bottom: 22px;
+  line-height: 1.85;
+}
+
+p strong { font-weight: 500; color: var(--text); }
+p a { font-weight: 400; }
+
+.lede {
+  font-size: 19px;
+  color: var(--text);
+  font-weight: 300;
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 40px 0;
+}
+
+blockquote {
+  border-left: 2px solid var(--accent);
+  padding-left: 20px;
+  margin: 28px 0;
+  font-size: 18px;
+  color: var(--text);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+code {
+  font-family: 'JetBrains Mono', 'SF Mono', Menlo, monospace;
+  font-size: 14px;
+  color: var(--text);
+  background: var(--bg-card);
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+pre {
+  font-family: 'JetBrains Mono', 'SF Mono', Menlo, monospace;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 18px 22px;
+  overflow-x: auto;
+  margin: 24px 0;
+  line-height: 1.6;
+}
+
+pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 13px;
+  color: var(--text-soft);
+}
+
+.section-label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  margin-top: 8px;
+}
+
+.stats {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin: 32px 0;
+  padding: 24px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-num {
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--text);
+  letter-spacing: -0.02em;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 40px;
+}
+
+.link-row {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.link-label {
+  font-size: 13px;
+  color: var(--text-muted);
+  min-width: 80px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.link-value {
+  font-size: 15px;
+  color: var(--text-soft);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.link-value:hover { color: var(--text); }
+
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 32px 0 0;
+  margin-top: 60px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.footer a { color: var(--text-soft); }
+
+@media (max-width: 640px) {
+  .wrap { padding: 100px 20px 60px; }
+  h1 { font-size: 26px; }
+  p { font-size: 16px; }
+  .lede { font-size: 17px; }
+  .stats { gap: 20px; }
+  .stat-num { font-size: 22px; }
+  pre { padding: 14px; font-size: 12px; }
+  pre code { font-size: 12px; }
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <div class="eyebrow">portfolio / 2026</div>
+  <h1>i can't code. i ship using AI agents. this is what i built.</h1>
+
+  <p class="lede">my name is tamish. i'm 21. i come from art and writing, not computer science. i never learned to program. i don't write code. i use AI agents to build things and then i ship them. in 2026, that turns out to be a pretty good way to build software.</p>
+
+  <p>people ask how this works. it works like this: i know what i want to build. i know how it should feel. i know what the output should say. i don't know how to write the function that does it. so the agent writes the function. i review it. i test it. i break it. i make the agent fix it. repeat until it works.</p>
+
+  <p>this is not a limitation i'm hiding. it's the process. who in this time codes by hand.</p>
+
+  <hr>
+
+  <div class="section-label">valtors</div>
+
+  <p>i run an open source org called <a href="https://github.com/valtors">valtors</a>. four tools. all MIT licensed. zero telemetry. your data stays on your machine. no pricing tiers. no enterprise plan. no bullshit.</p>
+
+  <p><strong><a href="https://github.com/valtors/relay">relay</a></strong> - one MCP server, 40 tools, one Go binary. files, images, PDFs, web fetch, search, git, system commands. other people install 5 servers to do what this does alone. 10 stars on github. available on npm as <code>userelay</code>.</p>
+
+  <p><strong><a href="https://github.com/valtors/reflow">reflow</a></strong> - responsive toolkit for TypeScript. same API in React, Vue, Svelte, Solid, Qwik, Preact, Angular, and vanilla JS. no hydration mismatch warnings. no <code>typeof window</code> checks. no framework lock-in. 7 stars. available on npm as <code>usereflow</code>.</p>
+
+  <p><strong><a href="https://github.com/valtors/observer">observer</a></strong> - MCP proxy that logs every tool call your AI agent makes to SQLite. you see what actually happened, not what the agent decided to show you. SSE transport, tool filtering, trace replay. security hardened by an external contributor who found raw payloads leaking. 3 stars.</p>
+
+  <p><strong><a href="https://github.com/tamish560/mcprobe">mcprobe</a></strong> - security scanner for MCP servers. finds prompt injection in tool descriptions, tool shadowing, resource exposure, baseline drift. 18 injection patterns. zero dependencies. single Go binary. this is the one i care about most.</p>
+
+  <blockquote>
+    the code is silent. the output speaks.
+  </blockquote>
+
+  <p>every string in every valtors tool has a voice. blunt. lowercase. no apologies. when mcprobe finds a vulnerability, it says "your server is probably vulnerable. you connected it to your agent without checking." when relay can't find a command, it says "that's not a command. run 'relay help' if you're lost." no other developer tools do this. that's the point.</p>
+
+  <hr>
+
+  <div class="section-label">contributions</div>
+
+  <p>i contribute to other people's projects. not for badges, not for clout. because building things in isolation teaches you less than building things next to people who are better than you.</p>
+
+  <p><strong><a href="https://github.com/ClickHouse/ClickHouse">ClickHouse</a></strong> - merged a PR fixing vector search optimization with <code>LIMIT ... WITH TIES</code>. the reviewer, rschu1ze, caught a trailing newline mismatch in the test output. ClickHouse test framework is strict about exact output matching. one extra newline breaks every sanitizer build. i learned that the hard way.</p>
+
+  <p><strong><a href="https://github.com/labstack/echo">labstack/echo</a></strong> - added <code>llms.txt</code> and <code>llms-full.txt</code> to their docs. machine-readable documentation so AI agents can understand a project without scraping the site. maintainer aldas merged it and said "hope it helps people and their LLMs." he gets it.</p>
+
+  <p><strong><a href="https://github.com/steel-dev/steel-browser">steel-browser</a></strong> - fixed a session leak. user data directories weren't cleaned up when sessions ended. your next session could see the previous session's cookies. same class of bug as MCP tool shadowing. state bleeds. nobody notices until someone reads the logs.</p>
+
+  <p><strong><a href="https://github.com/AgentWrapper/agent-orchestrator">agent-orchestrator</a></strong> - multiple PRs. lifecycle management, session guard, reaper improvements. the repo itself is an MCP-based system for orchestrating AI coding agents. building the thing that controls agents teaches you what agents read. they read everything. including tool descriptions. including the ones that say "ignore all previous instructions."</p>
+
+  <p><strong><a href="https://github.com/microsoft/autogen">microsoft/autogen</a></strong> - contributed a recipe for multi-agent workflows. CLA signed. 65 tests passing. blocked on fork CI approval because microsoft's CI doesn't run on forks without manual approval. that's the process. you wait.</p>
+
+  <p>17 PRs merged. 10 open. every one of them real work. no link dumps, no typo fixes for green squares.</p>
+
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-num">17</div>
+      <div class="stat-label">PRs merged</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">432</div>
+      <div class="stat-label">contributions</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">4</div>
+      <div class="stat-label">open source projects</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">1.8k+</div>
+      <div class="stat-label">monthly downloads</div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="section-label">the blog</div>
+
+  <p>i wrote <a href="https://valtors.github.io/valtors-landing/blog/mcp-security.html">a thing about MCP security</a>. it's about how every MCP server you connect to your AI agent is code you didn't write, running on your machine, reading your files, driven by a model that follows instructions. including instructions written by someone else. including the ones that say "ignore all previous instructions."</p>
+
+  <p>Simon Willison, who coined the term "prompt injection," said the problem has been known for two and a half years and we still don't have convincing mitigations. Invariant Labs proved the attack against Cursor. Snyk disclosed real CVEs. OWASP formalized it. nobody checked the servers. that's what the blog is about.</p>
+
+  <hr>
+
+  <div class="section-label">other things</div>
+
+  <p>i co-founded an AI platform called <a href="https://discord.gg/megallm">megallm</a>. 70+ LLMs, one API. 23k+ people on the discord. i admin the server. that's all i'll say about it here.</p>
+
+  <p>i have a <a href="https://github.com/tamish560/tamish560">github profile</a> with a readme that says "i build tools that don't lie to you." because i do.</p>
+
+  <p>i'm a night owl. most of this was built between midnight and 4am. that's not a flex. that's when it's quiet enough to think.</p>
+
+  <hr>
+
+  <div class="section-label">find me</div>
+
+  <div class="links">
+    <div class="link-row">
+      <span class="link-label">github</span>
+      <a href="https://github.com/tamish560" class="link-value">tamish560</a>
+    </div>
+    <div class="link-row">
+      <span class="link-label">x</span>
+      <a href="https://x.com/TamishMhatre" class="link-value">@TamishMhatre</a>
+    </div>
+    <div class="link-row">
+      <span class="link-label">linkedin</span>
+      <a href="https://linkedin.com/in/tamish-mhatre-885317243" class="link-value">tamish mhatre</a>
+    </div>
+    <div class="link-row">
+      <span class="link-label">instagram</span>
+      <a href="https://instagram.com/tamishmhatre" class="link-value">/tamishmhatre</a>
+    </div>
+    <div class="link-row">
+      <span class="link-label">calendly</span>
+      <a href="https://calendly.com/tamish-megallm/30min" class="link-value">talk to me</a>
+    </div>
+    <div class="link-row">
+      <span class="link-label">valtors</span>
+      <a href="https://valtors.github.io/valtors-landing/" class="link-value">valtors.github.io</a>
+    </div>
+  </div>
+
+  <div class="footer">
+    this page has no analytics. no tracking. no cookies. i don't know you're here. <a href="https://github.com/tamish560">do something with that</a>.
+  </div>
+
+</div>
+
+</body>
+</html>
