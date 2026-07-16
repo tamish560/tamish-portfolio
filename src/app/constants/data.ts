@@ -9,13 +9,13 @@ const BASE_PATH = "/tamish-portfolio";
 
 export const ABOUT_ME = {
   name: "Tamish Mhatre",
-  title: "Open Source Developer",
+  title: "i build tools that don't lie to you",
   location: "Bangalore, India",
   email: "tamish.mhatre@gmail.com",
   description: [
-    "I'm 21 and I build open source developer tools under Valtors. I can't write code but I ship using AI agents, and that turns out to be a pretty interesting way to build things.",
-    "Right now I'm building Relay (a Go MCP server with 40 tools), Reflow (a responsive toolkit that works across 8 frameworks), and Observer (a security-first MCP observability proxy). All open source, all MIT.",
-    "Working toward growing Valtors to 10,000+ stars and 100+ contributors.",
+    "21 years old. i can't write code. i ship using AI agents. that's not a limitation, it's a different way of building, and in 2026 it turns out to be a pretty good one.",
+    "i run valtors - open source tools for the MCP ecosystem. a server, a toolkit, a proxy, a scanner. MIT licensed, zero telemetry, your data stays on your machine. nobody's watching.",
+    "background is art and writing, not computer science. i think that's why the tools look different. the code is silent. the output speaks.",
   ],
   profileImage: `${BASE_PATH}/profile-avatar.png`,
   profileGif: `${BASE_PATH}/profile-gif.png`,
@@ -49,26 +49,26 @@ export const SKILLS = [
 
 export const EXPERIENCE = [
   {
-    company: "MegaLLM",
-    companyLink: "",
-    logo: `${BASE_PATH}/megallm-logo.png`,
-    role: "Co-Founder & Head of Business",
-    period: "2025 - Present",
-    location: "Bengaluru, India",
-    description:
-      "Building India's fastest growing AI startup. Scaling a developer platform that provides access to 70+ LLMs in a single API. Managing product and business operations.",
-    skills: ["Product Management", "Business Development", "AI Platforms"],
-  },
-  {
     company: "Valtors",
     companyLink: "https://github.com/valtors",
     logo: `${BASE_PATH}/valtors-logo.png`,
-    role: "Founder & Open Source Developer",
+    role: "Founder",
     period: "2025 - Present",
     location: "Bangalore, India",
     description:
-      "Building open source developer tools including Relay (Go MCP server), Reflow (responsive toolkit), and Observer (MCP observability proxy). Managing the org, shipping features via AI agents, and growing the contributor community.",
+      "building open source developer tools that don't apologise for being simple. relay (40-tool MCP server), reflow (responsive toolkit for 8 frameworks), observer (agent observability proxy), mcprobe (MCP security scanner). shipping via AI agents. no VC, no telemetry, no bullshit.",
     skills: ["Go", "TypeScript", "MCP", "SQLite", "GitHub Actions"],
+  },
+  {
+    company: "MegaLLM",
+    companyLink: "",
+    logo: `${BASE_PATH}/megallm-logo.png`,
+    role: "Co-Founder",
+    period: "2025 - Present",
+    location: "Bengaluru, India",
+    description:
+      "co-founding an AI platform. 70+ LLMs, one API. 23k+ discord community. building the business side while the engineers build the product.",
+    skills: ["Product", "Business", "AI Platforms"],
   },
 ];
 
