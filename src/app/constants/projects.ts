@@ -1,11 +1,11 @@
 export const PROJECTS = [
   {
     name: "mcprobe",
-    tagline: "Security scanner for MCP servers. Single binary, zero deps.",
+    tagline: "your MCP server is probably vulnerable.",
     overview:
-      "mcprobe connects to any MCP server, introspects its tools, prompts, and resources, then scans for prompt injection patterns, tool shadowing across servers, and drift from baseline (rug-pull attacks). Outputs text, JSON, or SARIF for CI integration.",
+      "mcprobe connects to any MCP server, introspects its tools, prompts, and resources, then scans for prompt injection, tool shadowing, resource exposure, and drift from baseline. you connected a server to your agent without checking it. this tells you what you missed.",
     description:
-      "A Go CLI that acts as a security scanner for MCP servers. Implements the MCP client protocol from scratch with stdio and HTTP transports. Detects 18 prompt injection patterns in tool descriptions, flags tool name shadowing when multiple servers define the same tool, saves baselines and diffs for drift detection, and exports SARIF 2.1.0 for CI pipelines. Pure Go stdlib, zero dependencies, single static binary.",
+      "a Go CLI that acts as a security scanner for MCP servers. implements the MCP client protocol from scratch with stdio and HTTP transports. detects 18 prompt injection patterns in tool descriptions, flags tool name shadowing, saves baselines and diffs for drift detection, scans for resource exposure to sensitive paths, and exports SARIF 2.1.0 for CI pipelines. pure Go stdlib, zero dependencies, single static binary.",
     tech: [
       "Go",
       "MCP",
@@ -27,12 +27,12 @@ export const PROJECTS = [
     },
     features: [
       "18 prompt injection pattern detectors for tool, prompt, and schema descriptions",
-      "Tool shadowing detection across multiple MCP servers",
-      "Baseline snapshots and drift detection for rug-pull attacks",
-      "Path traversal detection in resource URIs",
-      "Risk scoring 0-100 with severity levels (MINIMAL to CRITICAL)",
+      "tool shadowing detection across multiple MCP servers",
+      "baseline snapshots and drift detection for rug-pull attacks",
+      "resource exposure detection for sensitive paths (/etc, .ssh, .env, credentials)",
+      "risk scoring 0-100 with severity levels",
       "SARIF 2.1.0 output for GitHub Actions and CI integration",
-      "Zero dependencies, Go stdlib only, single static binary",
+      "zero dependencies, Go stdlib only, single static binary",
     ],
     technicalDetails: [
       {
@@ -50,11 +50,11 @@ export const PROJECTS = [
       {
         problem: "MCP servers can silently change tool descriptions after initial trust",
         solution:
-          "Baseline snapshots record the full server state (tools, prompts, resources, descriptions, schemas). Diff mode compares current state against baseline, flagging description changes as CRITICAL (potential rug-pull), tool additions as MEDIUM, and removals as HIGH.",
+          "Baseline snapshots record the full server state. Diff mode compares current state against baseline, flagging description changes as CRITICAL (potential rug-pull), tool additions as MEDIUM, and removals as HIGH.",
       },
     ],
     metrics: {
-      stars: "0+",
+      stars: "2+",
       patterns: "18",
       deps: "0",
       formats: "3",
@@ -62,11 +62,11 @@ export const PROJECTS = [
   },
   {
     name: "Relay",
-    tagline: "Go MCP server with 40 tools across 7 categories.",
+    tagline: "one MCP server, 40 tools, one binary.",
     overview:
-      "Relay is a Model Context Protocol server written in Go that gives AI agents 40 tools across filesystem, web, search, code, git, system, and utility categories. It works with any MCP-compatible client and ships as a single binary or npm package.",
+      "other people install 5 MCP servers to do what relay does alone. 40 tools across filesystem, web, search, code, git, system, and utility. one Go binary, zero runtime dependencies. works with any MCP-compatible client.",
     description:
-      "A Go-based MCP server providing 40 tools for AI coding agents. Includes filesystem operations, web fetching and search, code analysis, git operations, system commands, and utility functions. Designed to be boring tech on purpose: Go stdlib, no frameworks, single binary, MIT licensed.",
+      "a Go-based MCP server providing 40 tools for AI coding agents. filesystem operations, web fetching and search, code analysis, git operations, system commands, and utility functions. boring tech on purpose: Go stdlib, no frameworks, single binary, MIT licensed.",
     tech: [
       "Go",
       "MCP",
@@ -88,10 +88,10 @@ export const PROJECTS = [
     },
     features: [
       "40 tools across 7 categories: filesystem, web, search, code, git, system, utility",
-      "Single Go binary, zero runtime dependencies",
-      "Available on npm as userelay",
-      "Works with any MCP-compatible client",
-      "Doctor command for environment diagnostics",
+      "single Go binary, zero runtime dependencies",
+      "available on npm as userelay",
+      "works with any MCP-compatible client",
+      "config and doctor commands for environment diagnostics",
     ],
     technicalDetails: [
       {
@@ -113,7 +113,7 @@ export const PROJECTS = [
       },
     ],
     metrics: {
-      stars: "6+",
+      stars: "10+",
       loadTime: "< 1s",
       tools: "40",
       categories: "7",
@@ -121,11 +121,11 @@ export const PROJECTS = [
   },
   {
     name: "Reflow",
-    tagline: "SSR-safe responsive toolkit working across 8 frameworks.",
+    tagline: "8 frameworks. same API. no SSR breakage.",
     overview:
-      "Reflow is a TypeScript responsive layout toolkit that works across React, Vue, Svelte, Solid, Angular, Preact, Qwik, and vanilla JS. SSR-safe with no hydration mismatch issues.",
+      "responsive toolkit for TypeScript that doesn't break server-side rendering. same hooks in React, Vue, Svelte, Solid, Angular, Preact, Qwik, and vanilla JS. no hydration mismatch warnings. no typeof window checks. no framework lock-in.",
     description:
-      "A framework-agnostic responsive toolkit that provides hooks, composables, and utilities for building responsive UIs. Ships with 8 framework adapters so you use the same API everywhere. SSR-safe, tree-shakeable, zero runtime dependencies.",
+      "a framework-agnostic responsive toolkit that provides hooks, composables, and utilities for building responsive UIs. ships with 8 framework adapters so you use the same API everywhere. SSR-safe, tree-shakeable, zero runtime dependencies.",
     tech: [
       "TypeScript",
       "React",
@@ -148,8 +148,8 @@ export const PROJECTS = [
     features: [
       "8 framework adapters: React, Vue, Svelte, Solid, Angular, Preact, Qwik, vanilla",
       "SSR-safe with no hydration mismatches",
-      "Tree-shakeable, zero runtime dependencies",
-      "Available on npm as reflow",
+      "tree-shakeable, zero runtime dependencies",
+      "available on npm as usereflow",
     ],
     technicalDetails: [
       {
@@ -166,18 +166,18 @@ export const PROJECTS = [
       },
     ],
     metrics: {
-      stars: "4+",
+      stars: "7+",
       adapters: "8",
-      downloads: "1.3.0",
+      downloads: "1.8k+",
     },
   },
   {
     name: "Observer",
-    tagline: "Security-first MCP observability proxy with SQLite.",
+    tagline: "it watches your agent. silently.",
     overview:
-      "Observer is a transparent stdio proxy for MCP servers that logs every tool call to local SQLite. It traces tool name, timestamp, duration, error status, and SHA-256 hash by default, with raw payloads behind an explicit opt-in.",
+      "your agent makes 30 tool calls. you see the final text. observer logs every call to SQLite so you can see what actually happened. sits between your MCP client and server, transparent, silent.",
     description:
-      "A Go-based MCP proxy that sits between an AI agent and its MCP server, logging every tool call to a local SQLite database. Security-hardened: metadata-only traces by default, 0600 DB permissions, session-scoped queries, configurable redaction, and raw payload access behind an explicit environment variable.",
+      "a Go-based MCP proxy that sits between an AI agent and its MCP server, logging every tool call to a local SQLite database. security-hardened: metadata-only traces by default, 0600 DB permissions, session-scoped queries, configurable redaction, raw payload access behind an explicit environment variable. SSE transport and tool filtering included.",
     tech: [
       "Go",
       "MCP",
@@ -197,12 +197,13 @@ export const PROJECTS = [
       ],
     },
     features: [
-      "Metadata-only traces by default (tool name, timing, hash, status)",
-      "Raw payload opt-in via OBSERVER_RAW_PAYLOAD=1",
-      "Configurable redaction with OBSERVER_REDACT_PATTERNS",
-      "Session-scoped queries prevent cross-session data leakage",
-      "0600 database file permissions",
-      "trace.history, trace.search, trace.stats as MCP tools for agent self-introspection",
+      "metadata-only traces by default (tool name, timing, hash, status)",
+      "raw payload opt-in via OBSERVER_RAW_PAYLOAD=1",
+      "configurable redaction with OBSERVER_REDACT_PATTERNS",
+      "session-scoped queries prevent cross-session data leakage",
+      "SSE transport for remote setups",
+      "tool filtering to reduce token overhead",
+      "trace.history, trace.search, trace.stats, trace.replay as MCP tools",
     ],
     technicalDetails: [
       {
@@ -224,7 +225,7 @@ export const PROJECTS = [
       },
     ],
     metrics: {
-      stars: "0+",
+      stars: "3+",
       security: "Hardened",
     },
   },
