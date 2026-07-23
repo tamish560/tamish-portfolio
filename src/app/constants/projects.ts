@@ -18,10 +18,10 @@ export const PROJECTS = [
     link: "https://github.com/tamish560/mcprobe",
     github: "https://github.com/tamish560/mcprobe",
     images: {
-      hero: `${BASE_PATH}/placeholder-image.png",
+      hero: `${BASE_PATH}/placeholder-image.png`,
       gallery: [
         {
-          src: `${BASE_PATH}/placeholder-image.png",
+          src: `${BASE_PATH}/placeholder-image.png`,
           alt: "mcprobe scan report output",
           caption: "Security scan with risk score",
         },
@@ -77,12 +77,12 @@ export const PROJECTS = [
       "GitHub Actions",
     ],
     link: "https://github.com/valtors/relay",
-    github: "https://github.com/valtors/relay",
+    github: "https://github.com/valtors/relay`,
     images: {
-      hero: `${BASE_PATH}/relay-hero.png",
+      hero: `${BASE_PATH}/relay-hero.png`,
       gallery: [
         {
-          src: `${BASE_PATH}/relay-hero.png",
+          src: `${BASE_PATH}/relay-hero.png`,
           alt: "Relay project landing page",
           caption: "40 tools across 7 categories",
         },
@@ -136,12 +136,12 @@ export const PROJECTS = [
       "Vite",
     ],
     link: "https://valtors.github.io/reflow/",
-    github: "https://github.com/valtors/reflow",
+    github: "https://github.com/valtors/reflow`,
     images: {
-      hero: `${BASE_PATH}/reflow-hero.png",
+      hero: `${BASE_PATH}/reflow-hero.png`,
       gallery: [
         {
-          src: `${BASE_PATH}/reflow-hero.png",
+          src: `${BASE_PATH}/reflow-hero.png`,
           alt: "Reflow project landing page",
           caption: "Docs site with live examples",
         },
@@ -187,12 +187,12 @@ export const PROJECTS = [
       "stdio",
     ],
     link: "https://github.com/valtors/observer",
-    github: "https://github.com/valtors/observer",
+    github: "https://github.com/valtors/observer`,
     images: {
-      hero: `${BASE_PATH}/observer-hero.png",
+      hero: `${BASE_PATH}/observer-hero.png`,
       gallery: [
         {
-          src: `${BASE_PATH}/observer-hero.png",
+          src: `${BASE_PATH}/observer-hero.png`,
           alt: "Observer project landing page",
           caption: "Proxy between agent and MCP server",
         },
@@ -240,12 +240,12 @@ export const PROJECTS = [
       "a Go-based security layer for AI agents. environment sanitization removes API keys and tokens before the agent runs. path blocking prevents access to sensitive directories. injection scanning checks tool descriptions for known attack patterns. all actions logged to a local SQLite database with 0600 permissions.",
     tech: ["Go", "MCP", "SQLite", "Security"],
     link: "https://github.com/valtors/vault",
-    github: "https://github.com/valtors/vault",
+    github: "https://github.com/valtors/vault`,
     images: {
-      hero: `${BASE_PATH}/placeholder-image.png",
+      hero: `${BASE_PATH}/placeholder-image.png`,
       gallery: [
         {
-          src: `${BASE_PATH}/placeholder-image.png",
+          src: `${BASE_PATH}/placeholder-image.png`,
           alt: "Vault security layer",
           caption: "Audit layer for AI agents",
         },
@@ -286,12 +286,12 @@ export const PROJECTS = [
       "a Rust-based temporal knowledge graph for AI agents. stores facts as subject-predicate-object triples with confidence, recording timestamp, and validity windows. when a new fact contradicts an old one, the old fact is closed, not deleted. queries can time-travel: ask what was known on any date. one SQLite file, zero external dependencies.",
     tech: ["Rust", "SQLite", "MCP"],
     link: "https://github.com/valtors/cairn",
-    github: "https://github.com/valtors/cairn",
+    github: "https://github.com/valtors/cairn`,
     images: {
-      hero: `${BASE_PATH}/placeholder-image.png",
+      hero: `${BASE_PATH}/placeholder-image.png`,
       gallery: [
         {
-          src: `${BASE_PATH}/placeholder-image.png",
+          src: `${BASE_PATH}/placeholder-image.png`,
           alt: "Cairn knowledge store",
           caption: "Temporal facts with validity windows",
         },
@@ -333,12 +333,12 @@ export const PROJECTS = [
       "a Rust-based package manager for MCP servers. install servers from npm, git, or local paths. compose multiple servers into one unified endpoint. secure with built-in injection scanning. 6 Rust crates, zero external dependencies, MIT licensed.",
     tech: ["Rust", "MCP", "npm"],
     link: "https://github.com/valtors/smith",
-    github: "https://github.com/valtors/smith",
+    github: "https://github.com/valtors/smith`,
     images: {
-      hero: `${BASE_PATH}/placeholder-image.png",
+      hero: `${BASE_PATH}/placeholder-image.png`,
       gallery: [
         {
-          src: `${BASE_PATH}/placeholder-image.png",
+          src: `${BASE_PATH}/placeholder-image.png`,
           alt: "Smith package manager",
           caption: "npm for MCP servers",
         },
@@ -380,12 +380,12 @@ export const PROJECTS = [
       "a Go-based AI inbox that connects to github, gmail, and calendar. processes notifications, identifies what's urgent, and gives you a summary instead of a wall of badges. remembers context in cairn. local-first, no cloud, no telemetry.",
     tech: ["Go", "MCP", "SQLite"],
     link: "https://github.com/valtors/pulse",
-    github: "https://github.com/valtors/pulse",
+    github: "https://github.com/valtors/pulse`,
     images: {
-      hero: `${BASE_PATH}/placeholder-image.png",
+      hero: `${BASE_PATH}/placeholder-image.png`,
       gallery: [
         {
-          src: `${BASE_PATH}/placeholder-image.png",
+          src: `${BASE_PATH}/placeholder-image.png`,
           alt: "Pulse AI inbox",
           caption: "Your AI inbox",
         },
@@ -414,7 +414,7 @@ export const PROJECTS = [
     ],
     metrics: {
       stars: "1+",
-      deps: "0",
+      deps: "0`,
     },
   },
 ];
