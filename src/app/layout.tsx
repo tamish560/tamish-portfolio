@@ -177,7 +177,7 @@ export default function RootLayout({
           <GridPattern />
           <CustomCursor />
           <ScrollToTop />
-          <SmoothScroll>{children}</SmoothScroll>
+          {children}
         </ThemeProvider>
       </body>
     </html>
