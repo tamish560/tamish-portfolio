@@ -2,7 +2,7 @@
 // EDIT THIS FILE TO MAKE THE PORTFOLIO YOURS
 // =============================================
 
-const isVercel = process.env.VERCEL === "1";
+const isVercel = process.env.VERCEL === "1" || process.env.NEXT_PUBLIC_VERCEL_ENV === "production";
 const DOMAIN = "tamishmhatre.com";
 export const BASE_URL = `https://${DOMAIN}`;
 
