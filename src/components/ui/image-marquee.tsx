@@ -1,15 +1,16 @@
 "use client";
 
-
-const BP = "/tamish-portfolio";
+import { BASE_PATH } from "@/app/constants/data";
 
 const IMAGES = [
-  { src: `${BP}/relay-hero.png`, alt: "Relay" },
-  { src: `${BP}/reflow-hero.png`, alt: "Reflow" },
-  { src: `${BP}/observer-hero.png`, alt: "Observer" },
-  { src: `${BP}/relay-hero.png`, alt: "Relay" },
-  { src: `${BP}/reflow-hero.png`, alt: "Reflow" },
-  { src: `${BP}/observer-hero.png`, alt: "Observer" },
+  { src: `${BASE_PATH}/relay-hero.png`, alt: "Relay" },
+  { src: `${BASE_PATH}/reflow-hero.png`, alt: "Reflow" },
+  { src: `${BASE_PATH}/observer-hero.png`, alt: "Observer" },
+  { src: `${BASE_PATH}/placeholder-image.png`, alt: "mcprobe" },
+  { src: `${BASE_PATH}/placeholder-image.png`, alt: "Vault" },
+  { src: `${BASE_PATH}/placeholder-image.png`, alt: "Cairn" },
+  { src: `${BASE_PATH}/placeholder-image.png`, alt: "Smith" },
+  { src: `${BASE_PATH}/placeholder-image.png`, alt: "Pulse" },
 ];
 
 export default function ImageMarquee() {
