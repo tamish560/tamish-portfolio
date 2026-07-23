@@ -176,7 +176,7 @@ export default function RootLayout({
         >
           <GridPattern />
           <ScrollToTop />
-          <SmoothScroll>{children}</SmoothScroll>
+          {children}
         </ThemeProvider>
       </body>
     </html>
