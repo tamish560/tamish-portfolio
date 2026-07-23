@@ -27,6 +27,8 @@ jobs:
       - run: npm run build
         env:
           NEXT_TELEMETRY_DISABLED: 1
+          NEXT_PUBLIC_BASE_PATH: /tamish-portfolio
+          NEXT_PUBLIC_IS_EXPORT: 1
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./out
