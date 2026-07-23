@@ -6,7 +6,7 @@ const isVercel = process.env.VERCEL === "1" || process.env.NEXT_PUBLIC_VERCEL_EN
 const DOMAIN = "tamishmhatre.com";
 export const BASE_URL = `https://${DOMAIN}`;
 
-export const BASE_PATH = isVercel ? "" : "/tamish-portfolio";
+export const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || (isVercel ? "" : "/tamish-portfolio");
 
 export const ABOUT_ME = {
   name: "Tamish Mhatre",
