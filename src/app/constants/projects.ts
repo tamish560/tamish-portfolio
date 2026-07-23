@@ -1,3 +1,5 @@
+import { BASE_PATH } from "./data";
+
 export const PROJECTS = [
   {
     name: "mcprobe",
@@ -16,10 +18,10 @@ export const PROJECTS = [
     link: "https://github.com/tamish560/mcprobe",
     github: "https://github.com/tamish560/mcprobe",
     images: {
-      hero: "/tamish-portfolio/mcprobe-hero.png",
+      hero: `${BASE_PATH}/placeholder-image.png",
       gallery: [
         {
-          src: "/tamish-portfolio/mcprobe-hero.png",
+          src: `${BASE_PATH}/placeholder-image.png",
           alt: "mcprobe scan report output",
           caption: "Security scan with risk score",
         },
@@ -77,10 +79,10 @@ export const PROJECTS = [
     link: "https://github.com/valtors/relay",
     github: "https://github.com/valtors/relay",
     images: {
-      hero: "/tamish-portfolio/relay-hero.png",
+      hero: `${BASE_PATH}/relay-hero.png",
       gallery: [
         {
-          src: "/tamish-portfolio/relay-hero.png",
+          src: `${BASE_PATH}/relay-hero.png",
           alt: "Relay project landing page",
           caption: "40 tools across 7 categories",
         },
@@ -136,10 +138,10 @@ export const PROJECTS = [
     link: "https://valtors.github.io/reflow/",
     github: "https://github.com/valtors/reflow",
     images: {
-      hero: "/tamish-portfolio/reflow-hero.png",
+      hero: `${BASE_PATH}/reflow-hero.png",
       gallery: [
         {
-          src: "/tamish-portfolio/reflow-hero.png",
+          src: `${BASE_PATH}/reflow-hero.png",
           alt: "Reflow project landing page",
           caption: "Docs site with live examples",
         },
@@ -187,10 +189,10 @@ export const PROJECTS = [
     link: "https://github.com/valtors/observer",
     github: "https://github.com/valtors/observer",
     images: {
-      hero: "/tamish-portfolio/observer-hero.png",
+      hero: `${BASE_PATH}/observer-hero.png",
       gallery: [
         {
-          src: "/tamish-portfolio/observer-hero.png",
+          src: `${BASE_PATH}/observer-hero.png",
           alt: "Observer project landing page",
           caption: "Proxy between agent and MCP server",
         },
@@ -240,10 +242,10 @@ export const PROJECTS = [
     link: "https://github.com/valtors/vault",
     github: "https://github.com/valtors/vault",
     images: {
-      hero: "/tamish-portfolio/observer-hero.png",
+      hero: `${BASE_PATH}/placeholder-image.png",
       gallery: [
         {
-          src: "/tamish-portfolio/observer-hero.png",
+          src: `${BASE_PATH}/placeholder-image.png",
           alt: "Vault security layer",
           caption: "Audit layer for AI agents",
         },
@@ -286,10 +288,10 @@ export const PROJECTS = [
     link: "https://github.com/valtors/cairn",
     github: "https://github.com/valtors/cairn",
     images: {
-      hero: "/tamish-portfolio/observer-hero.png",
+      hero: `${BASE_PATH}/placeholder-image.png",
       gallery: [
         {
-          src: "/tamish-portfolio/observer-hero.png",
+          src: `${BASE_PATH}/placeholder-image.png",
           alt: "Cairn knowledge store",
           caption: "Temporal facts with validity windows",
         },
@@ -333,10 +335,10 @@ export const PROJECTS = [
     link: "https://github.com/valtors/smith",
     github: "https://github.com/valtors/smith",
     images: {
-      hero: "/tamish-portfolio/observer-hero.png",
+      hero: `${BASE_PATH}/placeholder-image.png",
       gallery: [
         {
-          src: "/tamish-portfolio/observer-hero.png",
+          src: `${BASE_PATH}/placeholder-image.png",
           alt: "Smith package manager",
           caption: "npm for MCP servers",
         },
@@ -380,10 +382,10 @@ export const PROJECTS = [
     link: "https://github.com/valtors/pulse",
     github: "https://github.com/valtors/pulse",
     images: {
-      hero: "/tamish-portfolio/observer-hero.png",
+      hero: `${BASE_PATH}/placeholder-image.png",
       gallery: [
         {
-          src: "/tamish-portfolio/observer-hero.png",
+          src: `${BASE_PATH}/placeholder-image.png",
           alt: "Pulse AI inbox",
           caption: "Your AI inbox",
         },

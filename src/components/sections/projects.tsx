@@ -2,7 +2,7 @@
 
 import { ExternalLink, Github, MousePointerClick } from "lucide-react";
 import Link from "next/link";
-import { PROJECTS } from "@/app/constants/data";
+import { PROJECTS, BASE_PATH } from "@/app/constants/data";
 import { useState } from "react";
 import { generateSlug } from "@/lib/utils";
 import ImageTooltip from "@/components/ui/image-tooltip";
@@ -43,7 +43,7 @@ export default function Projects() {
                   <h3 className="font-medium text-base">
                     <ImageTooltip
                       imageSrc={
-                        project.images?.hero || "/tamish-portfolio/placeholder-image.png"
+                        project.images?.hero || `${BASE_PATH}/placeholder-image.png`
                       }
                       imageAlt={`${project.name} preview`}
                     >

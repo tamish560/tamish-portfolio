@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
-import { BASE_URL, SOCIAL_LINKS, ABOUT_ME, USER_NAMES, EDUCATION } from "./constants/data";
+import { BASE_URL, BASE_PATH, SOCIAL_LINKS, ABOUT_ME, USER_NAMES, EDUCATION } from "./constants/data";
 import SmoothScroll from "@/components/ui/smooth-scroll";
 import ScrollToTop from "@/components/ui/scroll-to-top";
 import GridPattern from "@/components/ui/grid-pattern";
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     siteName: ABOUT_ME.name,
     images: [
       {
-        url: "/tamish-portfolio/opengraph-image.png",
+        url: `${BASE_PATH}/opengraph-image.png`,
         width: 1200,
         height: 630,
         alt: `${ABOUT_ME.name} - Portfolio Website`,
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     title: ABOUT_ME.name,
     description: `${ABOUT_ME.name}'s personal portfolio showcasing development skills, projects, and professional experience.`,
     creator: `@${USER_NAMES.twitterUsername}`,
-    images: ["/tamish-portfolio/opengraph-image.png"],
+    images: [`${BASE_PATH}/opengraph-image.png`],
   },
   robots: {
     index: true,
