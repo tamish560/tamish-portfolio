@@ -1,0 +1,4 @@
+{
+  "buildCommand": "NEXT_PUBLIC_IS_EXPORT=1 NEXT_PUBLIC_BASE_PATH= next build",
+  "outputDirectory": "out"
+}
