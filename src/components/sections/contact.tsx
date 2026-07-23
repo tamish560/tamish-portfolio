@@ -12,7 +12,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FaRegCommentDots } from "react-icons/fa";
 import { useState, ChangeEvent, FormEvent, ComponentType } from "react";
 import Meeting from "../ui/cal-meeting";
-import { SOCIAL_LINKS, CONTACT_FORM_ENDPOINT } from "@/app/constants/data";
+import { SOCIAL_LINKS, CONTACT_EMAIL } from "@/app/constants/data";
 
 // =============================================
 // TYPE DEFINITIONS
@@ -40,7 +40,7 @@ type SetStateFunction<T> = (value: T | ((prev: T) => T)) => void;
 // FORM CONFIGURATION
 // =============================================
 const FORM_CONFIG = {
-  endpoint: CONTACT_FORM_ENDPOINT,
+  email: CONTACT_EMAIL,
   initialData: { name: "", email: "", message: "" } as FormData,
   fields: [
     {
@@ -81,24 +81,15 @@ const submitForm = async (
   setErrorMessage("");
 
   try {
-    const response = await fetch(FORM_CONFIG.endpoint, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
-    });
-
-    if (response.ok) {
-      setStatus("success");
-      setFormData(FORM_CONFIG.initialData);
-    } else {
-      const errorData = await response.json();
-      setErrorMessage(
-        errorData.error || "Something went wrong. Please try again."
-      );
-      setStatus("error");
-    }
+    const subject = encodeURIComponent(`Portfolio message from ${formData.name}`);
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`
+    );
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+    setStatus("success");
+    setFormData(FORM_CONFIG.initialData);
   } catch {
-    setErrorMessage("An unexpected error occurred. Please try again.");
+    setErrorMessage("Something went wrong. Please email me directly at " + CONTACT_EMAIL);
     setStatus("error");
   }
 };

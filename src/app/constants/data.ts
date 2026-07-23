@@ -39,7 +39,8 @@ export const SOCIAL_LINKS = {
   email: `mailto:${ABOUT_ME.email}?subject=Message%20from%20Website&body=Hi!%20I%27m...`,
 };
 
-export const CONTACT_FORM_ENDPOINT = "https://formspree.io/f/your-form-id";
+export const CONTACT_EMAIL = "tamish@megallm.io";
+export const CONTACT_FORM_ENDPOINT = "";
 
 export { PROJECTS } from "./projects";
 
