@@ -113,7 +113,7 @@ export const PROJECTS = [
       },
     ],
     metrics: {
-      stars: "10+",
+      stars: "12+",
       loadTime: "< 1s",
       tools: "40",
       categories: "7",
@@ -168,7 +168,7 @@ export const PROJECTS = [
     metrics: {
       stars: "7+",
       adapters: "8",
-      downloads: "1.8k+",
+      downloads: "1904/mo",
     },
   },
   {
@@ -227,6 +227,192 @@ export const PROJECTS = [
     metrics: {
       stars: "3+",
       security: "Hardened",
+    },
+  },
+  {
+    name: "Vault",
+    tagline: "run untrusted agents without burning down your machine.",
+    overview:
+      "not a real sandbox. an audit layer. strips secrets from environment variables, blocks sensitive file paths, scans for prompt injection in tool descriptions, logs every action to SQLite. honest about what it is and what it isn't.",
+    description:
+      "a Go-based security layer for AI agents. environment sanitization removes API keys and tokens before the agent runs. path blocking prevents access to sensitive directories. injection scanning checks tool descriptions for known attack patterns. all actions logged to a local SQLite database with 0600 permissions.",
+    tech: ["Go", "MCP", "SQLite", "Security"],
+    link: "https://github.com/valtors/vault",
+    github: "https://github.com/valtors/vault",
+    images: {
+      hero: "/tamish-portfolio/observer-hero.png",
+      gallery: [
+        {
+          src: "/tamish-portfolio/observer-hero.png",
+          alt: "Vault security layer",
+          caption: "Audit layer for AI agents",
+        },
+      ],
+    },
+    features: [
+      "environment variable sanitization removes secrets before agent execution",
+      "path-based access control for sensitive directories",
+      "prompt injection scanning in tool descriptions",
+      "SQLite audit log with 0600 permissions",
+      "not a real sandbox. honest about that.",
+    ],
+    technicalDetails: [
+      {
+        title: "Honest Scope",
+        description:
+          "Vault doesn't pretend to be a full sandbox. it's an audit layer that reduces the blast radius of untrusted agents. the README says this explicitly. no false sense of security.",
+      },
+    ],
+    challenges: [
+      {
+        problem: "Agents need access to do useful work but shouldn't touch everything",
+        solution:
+          "Path-based allow/deny lists with sensible defaults. secrets stripped from environment but accessible through an explicit allowlist. the agent sees a cleaned-up view of the world.",
+      },
+    ],
+    metrics: {
+      stars: "1+",
+      deps: "0",
+    },
+  },
+  {
+    name: "Cairn",
+    tagline: "agents forget. this makes them remember.",
+    overview:
+      "temporal knowledge store in one SQLite file. facts are triples with validity windows. contradictions close old facts, they don't delete them. forgetting is a first-class operation. you can ask what was true on any date.",
+    description:
+      "a Rust-based temporal knowledge graph for AI agents. stores facts as subject-predicate-object triples with confidence, recording timestamp, and validity windows. when a new fact contradicts an old one, the old fact is closed, not deleted. queries can time-travel: ask what was known on any date. one SQLite file, zero external dependencies.",
+    tech: ["Rust", "SQLite", "MCP"],
+    link: "https://github.com/valtors/cairn",
+    github: "https://github.com/valtors/cairn",
+    images: {
+      hero: "/tamish-portfolio/observer-hero.png",
+      gallery: [
+        {
+          src: "/tamish-portfolio/observer-hero.png",
+          alt: "Cairn knowledge store",
+          caption: "Temporal facts with validity windows",
+        },
+      ],
+    },
+    features: [
+      "temporal triples: subject, predicate, object, confidence, valid_from, valid_to",
+      "contradictions close old facts, never delete them",
+      "time-travel queries: what was true on date X",
+      "forgetting as a first-class operation",
+      "one SQLite file, 7 Rust crates, zero external deps",
+    ],
+    technicalDetails: [
+      {
+        title: "Temporal Model",
+        description:
+          "Every fact has a validity window. New facts that contradict old ones close the old fact's valid_to. You can reconstruct the state of knowledge at any point in time. Nothing is ever lost.",
+      },
+    ],
+    challenges: [
+      {
+        problem: "Agents need persistent memory but facts change over time",
+        solution:
+          "Bitemporal model. Facts are never deleted, only closed. The query engine reconstructs the active set at any timestamp. Contradictions are resolved by closing the older fact.",
+      },
+    ],
+    metrics: {
+      stars: "1+",
+      crates: "7",
+      deps: "0",
+    },
+  },
+  {
+    name: "Smith",
+    tagline: "npm made javascript installable. this does it for MCP.",
+    overview:
+      "install, compose, secure, and manage MCP servers. one binary. fetch from npm, git, or local path. spawn all installed servers and expose one unified endpoint. like npm but for MCP.",
+    description:
+      "a Rust-based package manager for MCP servers. install servers from npm, git, or local paths. compose multiple servers into one unified endpoint. secure with built-in injection scanning. 6 Rust crates, zero external dependencies, MIT licensed.",
+    tech: ["Rust", "MCP", "npm"],
+    link: "https://github.com/valtors/smith",
+    github: "https://github.com/valtors/smith",
+    images: {
+      hero: "/tamish-portfolio/observer-hero.png",
+      gallery: [
+        {
+          src: "/tamish-portfolio/observer-hero.png",
+          alt: "Smith package manager",
+          caption: "npm for MCP servers",
+        },
+      ],
+    },
+    features: [
+      "install MCP servers from npm, git, or local path",
+      "compose multiple servers into one unified endpoint",
+      "built-in injection scanning for installed servers",
+      "profile-based configuration for different setups",
+      "6 Rust crates, zero external dependencies",
+    ],
+    technicalDetails: [
+      {
+        title: "Composition Engine",
+        description:
+          "Smith spawns all installed MCP servers and exposes them through a single endpoint. The client sees one server with all tools. Smith handles routing, lifecycle, and health checks.",
+      },
+    ],
+    challenges: [
+      {
+        problem: "Managing multiple MCP servers is painful",
+        solution:
+          "Smith handles installation, configuration, spawning, and composition. One command to install, one to run. The profile system lets you switch between setups instantly.",
+      },
+    ],
+    metrics: {
+      stars: "1+",
+      crates: "6",
+      deps: "0",
+    },
+  },
+  {
+    name: "Pulse",
+    tagline: "thirty-eight notifications. three urgent items. your AI does the rest.",
+    overview:
+      "connect github, gmail, calendar. asks 'what did i miss' and gets a real answer. remembers what matters, forgets what doesn't. local-first, single binary, one SQLite database.",
+    description:
+      "a Go-based AI inbox that connects to github, gmail, and calendar. processes notifications, identifies what's urgent, and gives you a summary instead of a wall of badges. remembers context in cairn. local-first, no cloud, no telemetry.",
+    tech: ["Go", "MCP", "SQLite"],
+    link: "https://github.com/valtors/pulse",
+    github: "https://github.com/valtors/pulse",
+    images: {
+      hero: "/tamish-portfolio/observer-hero.png",
+      gallery: [
+        {
+          src: "/tamish-portfolio/observer-hero.png",
+          alt: "Pulse AI inbox",
+          caption: "Your AI inbox",
+        },
+      ],
+    },
+    features: [
+      "github, gmail, calendar integration",
+      "AI-powered summarization: what did i miss",
+      "urgency detection and prioritization",
+      "context persistence via cairn integration",
+      "local-first, single binary, one SQLite database",
+    ],
+    technicalDetails: [
+      {
+        title: "Local-First Architecture",
+        description:
+          "All data stays in one SQLite file. No cloud, no telemetry. The AI runs locally when possible, falls back to API calls when needed. Your notifications never leave your machine.",
+      },
+    ],
+    challenges: [
+      {
+        problem: "Notification overload across multiple platforms",
+        solution:
+          "Pulse aggregates, deduplicates, and prioritizes. The AI reads everything so you don't have to. You get a summary, not a badge count.",
+      },
+    ],
+    metrics: {
+      stars: "1+",
+      deps: "0",
     },
   },
 ];

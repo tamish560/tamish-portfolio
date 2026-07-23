@@ -14,8 +14,8 @@ export const ABOUT_ME = {
   email: "tamish.mhatre@gmail.com",
   description: [
     "21 years old. i can't write code. i ship using AI agents. that's not a limitation, it's a different way of building, and in 2026 it turns out to be a pretty good one.",
-    "i run valtors - open source tools for the MCP ecosystem. a server, a toolkit, a proxy, a scanner. MIT licensed, zero telemetry, your data stays on your machine. nobody's watching.",
-    "background is art and writing, not computer science. i think that's why the tools look different. the code is silent. the output speaks.",
+    "i run valtors - eight open source tools for the MCP ecosystem. a server, a toolkit, a proxy, a scanner, a sandbox, a knowledge store, a package manager, an AI inbox. MIT licensed, zero telemetry, your data stays on your machine. nobody's watching.",
+    "28 stars. 1904 monthly npm downloads. 8 contributors. 624 commits. no VC. no telemetry. no bullshit. background is art and writing, not computer science. i think that's why the tools look different. the code is silent. the output speaks.",
   ],
   profileImage: `${BASE_PATH}/profile-avatar.png`,
   profileGif: `${BASE_PATH}/profile-gif.png`,
@@ -44,7 +44,7 @@ export const CONTACT_FORM_ENDPOINT = "https://formspree.io/f/your-form-id";
 export { PROJECTS } from "./projects";
 
 export const SKILLS = [
-  "go", "ts", "react", "nextjs", "tailwind", "nodejs", "npm", "git", "github", "githubactions", "docker", "sqlite", "vite", "vscode", "md", "vercel",
+  "go", "rust", "ts", "react", "nextjs", "tailwind", "nodejs", "npm", "git", "github", "githubactions", "docker", "sqlite", "vite", "vscode", "md", "vercel",
 ];
 
 export const EXPERIENCE = [
@@ -56,8 +56,8 @@ export const EXPERIENCE = [
     period: "2025 - Present",
     location: "Bangalore, India",
     description:
-      "building open source developer tools that don't apologise for being simple. relay (40-tool MCP server), reflow (responsive toolkit for 8 frameworks), observer (agent observability proxy), mcprobe (MCP security scanner). shipping via AI agents. no VC, no telemetry, no bullshit.",
-    skills: ["Go", "TypeScript", "MCP", "SQLite", "GitHub Actions"],
+      "building open source developer tools that don't apologise for being simple. eight tools: relay (40-tool MCP server), reflow (responsive toolkit for 8 frameworks), observer (agent observability proxy), mcprobe (MCP security scanner), vault (agent sandbox), cairn (temporal knowledge store), smith (MCP package manager), pulse (AI inbox). 28 stars, 1904 monthly downloads, 8 contributors. shipping via AI agents. no VC, no telemetry, no bullshit.",
+    skills: ["Go", "Rust", "TypeScript", "MCP", "SQLite", "GitHub Actions"],
   },
   {
     company: "MegaLLM",
