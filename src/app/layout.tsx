@@ -175,7 +175,6 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <GridPattern />
-          <CustomCursor />
           <ScrollToTop />
           <SmoothScroll>{children}</SmoothScroll>
         </ThemeProvider>
