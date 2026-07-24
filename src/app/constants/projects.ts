@@ -18,10 +18,10 @@ export const PROJECTS = [
     link: "https://github.com/tamish560/mcprobe",
     github: "https://github.com/tamish560/mcprobe",
     images: {
-      hero: `${BASE_PATH}/placeholder-image.png`,
+      hero: `${BASE_PATH}/mcprobe-hero.png`,
       gallery: [
         {
-          src: `${BASE_PATH}/placeholder-image.png`,
+          src: `${BASE_PATH}/mcprobe-hero.png`,
           alt: "mcprobe scan report output",
           caption: "Security scan with risk score",
         },
@@ -242,10 +242,10 @@ export const PROJECTS = [
     link: "https://github.com/valtors/vault",
     github: "https://github.com/valtors/vault",
     images: {
-      hero: `${BASE_PATH}/placeholder-image.png`,
+      hero: `${BASE_PATH}/vault-hero.png`,
       gallery: [
         {
-          src: `${BASE_PATH}/placeholder-image.png`,
+          src: `${BASE_PATH}/vault-hero.png`,
           alt: "Vault security layer",
           caption: "Audit layer for AI agents",
         },
@@ -288,10 +288,10 @@ export const PROJECTS = [
     link: "https://github.com/valtors/cairn",
     github: "https://github.com/valtors/cairn",
     images: {
-      hero: `${BASE_PATH}/placeholder-image.png`,
+      hero: `${BASE_PATH}/cairn-hero.png`,
       gallery: [
         {
-          src: `${BASE_PATH}/placeholder-image.png`,
+          src: `${BASE_PATH}/cairn-hero.png`,
           alt: "Cairn knowledge store",
           caption: "Temporal facts with validity windows",
         },
@@ -335,10 +335,10 @@ export const PROJECTS = [
     link: "https://github.com/valtors/smith",
     github: "https://github.com/valtors/smith",
     images: {
-      hero: `${BASE_PATH}/placeholder-image.png`,
+      hero: `${BASE_PATH}/smith-hero.png`,
       gallery: [
         {
-          src: `${BASE_PATH}/placeholder-image.png`,
+          src: `${BASE_PATH}/smith-hero.png`,
           alt: "Smith package manager",
           caption: "npm for MCP servers",
         },
@@ -382,10 +382,10 @@ export const PROJECTS = [
     link: "https://github.com/valtors/pulse",
     github: "https://github.com/valtors/pulse",
     images: {
-      hero: `${BASE_PATH}/placeholder-image.png`,
+      hero: `${BASE_PATH}/pulse-hero.png`,
       gallery: [
         {
-          src: `${BASE_PATH}/placeholder-image.png`,
+          src: `${BASE_PATH}/pulse-hero.png`,
           alt: "Pulse AI inbox",
           caption: "Your AI inbox",
         },
