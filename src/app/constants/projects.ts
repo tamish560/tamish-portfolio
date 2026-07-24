@@ -1,4 +1,4 @@
-import { BASE_PATH } from "./data";
+import { BASE_PATH } from "./base-path";
 
 export const PROJECTS = [
   {

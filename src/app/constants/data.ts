@@ -2,7 +2,8 @@
 // EDIT THIS FILE TO MAKE THE PORTFOLIO YOURS
 // =============================================
 
-export const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
+import { BASE_PATH } from "./base-path";
+export { BASE_PATH } from "./base-path";
 
 const DOMAIN = "tamishmhatre.com";
 export const BASE_URL = `https://${DOMAIN}`;

@@ -1,11 +1,16 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import GitHubCalendar from "react-github-calendar";
 import { useTheme } from "next-themes";
 import { USER_NAMES } from "@/app/constants/data";
 
 const Banner = () => {
   const { resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
+
   const colorScheme =
     resolvedTheme === "light" || resolvedTheme === "dark"
       ? resolvedTheme
@@ -19,17 +24,19 @@ const Banner = () => {
   return (
     <section className="w-full p-2 sm:p-4 relative group flex justify-center">
       <div className="w-full [&_svg]:w-full! [&_svg]:h-auto!">
-        <GitHubCalendar
-          username={USER_NAMES.githubUsername}
-          blockSize={10}
-          blockMargin={4}
-          colorScheme={colorScheme}
-          theme={customTheme}
-          fontSize={12}
-          hideColorLegend
-          hideMonthLabels={true}
-          hideTotalCount={true}
-        />
+        {mounted && (
+          <GitHubCalendar
+            username={USER_NAMES.githubUsername}
+            blockSize={10}
+            blockMargin={4}
+            colorScheme={colorScheme}
+            theme={customTheme}
+            fontSize={12}
+            hideColorLegend
+            hideMonthLabels={true}
+            hideTotalCount={true}
+          />
+        )}
       </div>
     </section>
   );
