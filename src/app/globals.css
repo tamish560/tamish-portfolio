@@ -197,4 +197,13 @@ html.lenis body {
   ::view-transition-old(root) {
     z-index: 1;
   }
+
+  @keyframes marquee {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-50%, 0, 0);
+    }
+  }
 }

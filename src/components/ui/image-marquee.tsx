@@ -15,19 +15,7 @@ const IMAGES = [
 
 export default function ImageMarquee() {
   return (
-    <>
-      <style jsx global>{`
-        @keyframes marquee {
-          0% {
-            transform: translate3d(0, 0, 0);
-          }
-          100% {
-            transform: translate3d(-50%, 0, 0);
-          }
-        }
-      `}</style>
-
-      <div className="relative w-full overflow-hidden">
+    <div className="relative w-full overflow-hidden">
         <div className="absolute left-0 top-0 bottom-0 w-20 backdrop-blur-md [mask-image:linear-gradient(to_right,black,transparent)] pointer-events-none z-10" />
         <div className="absolute right-0 top-0 bottom-0 w-20 backdrop-blur-md [mask-image:linear-gradient(to_left,black,transparent)] pointer-events-none z-10" />
 
@@ -47,7 +35,6 @@ export default function ImageMarquee() {
             </div>
           ))}
         </div>
-      </div>
-    </>
+    </div>
   );
 }

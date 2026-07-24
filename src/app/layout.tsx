@@ -3,10 +3,7 @@ import { Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import { BASE_URL, BASE_PATH, SOCIAL_LINKS, ABOUT_ME, USER_NAMES, EDUCATION } from "./constants/data";
-import SmoothScroll from "@/components/ui/smooth-scroll";
 import ScrollToTop from "@/components/ui/scroll-to-top";
-import GridPattern from "@/components/ui/grid-pattern";
-import CustomCursor from "@/components/ui/custom-cursor";
 
 const bricolage = Bricolage_Grotesque({
   variable: "--font-bricolage",
@@ -174,7 +171,6 @@ export default function RootLayout({
           enableSystem={true}
           disableTransitionOnChange
         >
-          <GridPattern />
           <ScrollToTop />
           {children}
         </ThemeProvider>
